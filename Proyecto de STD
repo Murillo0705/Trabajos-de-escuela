@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class ArbolesBinarios {
-            // Nodo como clase estática interna
+//clase nodo            
+// Nodo como clase estática interna
     static class Nodo {
         int valor;
         Nodo izquierda, derecha;
@@ -11,11 +12,11 @@ public class ArbolesBinarios {
         }
     }
 
-    // Arbol binario como clase estatica interna
+    // Clase Arbol binario como clase estática interna
     static class ArbolBinario {
         Nodo raiz;
 
-        // Insertar un nuevo valor en el Arbol
+        // Metodo Insertar un nuevo valor en el arbol
         public void insertar(int valor) {
             raiz = insertarRec(raiz, valor);
         }
@@ -34,7 +35,7 @@ public class ArbolesBinarios {
             return raiz;
         }
 
-        // Buscar un valor en el Arbol
+        // Metodo Buscar un valor en el arbol
         public boolean buscar(int valor) {
             return buscarRec(raiz, valor);
         }
@@ -49,7 +50,7 @@ public class ArbolesBinarios {
                     : buscarRec(raiz.derecha, valor);
         }
 
-        // Recorridos del Arbol
+        // Metodos Recorridos del arbol
         public void inorden() {
             System.out.print("Recorrido Inorden: ");
             inordenRec(raiz);
@@ -93,7 +94,7 @@ public class ArbolesBinarios {
         }
     }
 
-    // Main
+    // Metodo Main
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArbolBinario arbol = new ArbolBinario();
